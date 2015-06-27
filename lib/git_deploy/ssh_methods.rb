@@ -27,6 +27,7 @@ class GitDeploy
           end
           ch.send_data(askpass) if data =~ /^sudo password: /
         end
+        exit status unless status == 0
         output
       end
     end
